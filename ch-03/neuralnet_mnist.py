@@ -46,5 +46,5 @@ for i in range(len(x)):
     p = np.argmax(y) # 获得概率最高的元素的索引
     if p == t[i]:
         accuracy_cnt += 1
-
+print("Accuracy:"+ str(float(accuracy_cnt)/len(x)))
    
