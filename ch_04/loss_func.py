@@ -5,6 +5,7 @@ t = [0,0,1,0,0,0,0,0,0,0]
 
 # 均方误差（ mean squared error
 def mean_squared_error(y,t):
+    '''均方误差'''
     return 0.5*np.sum((y-t)**2)
 
 # 交叉熵误差（ cross_entropy_error
@@ -14,8 +15,9 @@ def mean_squared_error(y,t):
 
 # mini-batch版 交叉熵误差
 def cross_entropy_error(y,t):
+    '''mini-batch版 交叉熵误差'''
     # y: 模型的预测矩阵
-    # t: 监督数据矩阵
+    # t: 监督数据矩阵                         
     if y.ndim == 1:   # 数据的维度为 1
         t = t.reshape(1,t.size)
         y = y.reshape(1,y.size)   # 变成 二维方阵表格
@@ -25,6 +27,7 @@ def cross_entropy_error(y,t):
 
 # 该函数针对 监督数据 是标签格式
 def cross_entropy_error_tag(y,t):
+    '''mini-batch版 交叉熵误差(针对 监督数据 是标签格式)'''
     # y: 模型的预测矩阵
     # t: 监督数据矩阵
     if y.ndim == 1:   # 数据的维度为 1
@@ -35,8 +38,8 @@ def cross_entropy_error_tag(y,t):
     return -np.sum(np.log(y[np.arange(batch_size),t]+1e-7)) / batch_size
 # y[np.arange(batch_size),t]  花式索引 ： arnage生成的是0~9，监督数据 t 刚好对应猜测的下标
 # 靠 花式索引 把预测矩阵中的对应监督数据猜测概率取出来了
-
 if __name__ == '__main__':
+
     print("mean squared error:")
     print(mean_squared_error(np.array(y_2),np.array(t)))                                                                                                                                                                                                                                                                                                
     print(mean_squared_error(np.array(y_7),np.array(t)))
