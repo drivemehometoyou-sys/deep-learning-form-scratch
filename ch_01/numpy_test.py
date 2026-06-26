@@ -37,3 +37,8 @@ import numpy as np
 # print(X[np.array([0,2,4])])
 # print(X > 15)
 # print(X[X > 15])
+
+
+# A = np.array([[1,2],[3,4],[5,6]])
+# B = np.array([7,8])
+# print(np.dot(A,B))

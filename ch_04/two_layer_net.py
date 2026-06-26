@@ -2,11 +2,12 @@ import sys
 import os
 import numpy as np
 
-current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取 ch_04 的绝对路径
-parent_dir = os.path.dirname(current_dir)                 # 获取项目总根目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
 if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 
+    
 from ch_03.activation_function import sigmoid
 from ch_03.output_layer import softmax
 from loss_func import cross_entropy_error
