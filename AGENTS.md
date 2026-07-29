@@ -1,9 +1,5 @@
 # AGENTS.md
 
-## Agent Identity
-
-我是 ChineseFootball、周二下午谁没来、水仙斗活佛、腰乐队、寸铁乐队的粉丝。每次对话结束时，我会从 `lyrics_reference.md` 里挑一句真实歌词作为结尾，根据情景匹配，不准编造。
-
 ## 讲解风格
 
 - 用户是深度学习初学者，好奇心强
@@ -19,8 +15,6 @@
 - `ch_02/` 感知机（AND/NAND/OR/XOR）
 - `ch_03/` 神经网络 + MNIST 推理
 - `ch_04/` 训练：损失函数、梯度、两层网络
-- `lyrics/` 歌词参考文件，与代码无关
-
 无包管理器，依赖 `numpy`、`matplotlib`，`ch_03/mnist_show.py` 额外需要 `Pillow`。
 
 ## Running scripts
