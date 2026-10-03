@@ -9,7 +9,7 @@ import numpy as np
 from ch_03.activation_function import sigmoid
 from ch_03.output_layer import softmax
 from ch_04.loss_func import cross_entropy_error
-from util import im2col, col2im
+from ch_06.util import im2col, col2im
 
 
 class Relu:

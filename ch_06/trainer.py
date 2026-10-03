@@ -2,7 +2,7 @@
 import sys, os
 
 import numpy as np
-from optimizer import *
+from ch_06.optimizer import *
 
 class Trainer:
     """进行神经网络的训练的类
@@ -75,4 +75,3 @@ class Trainer:
         if self.verbose:
             print("=============== Final Test Accuracy ===============")
             print("test acc:" + str(test_acc))
-

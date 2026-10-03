@@ -15,6 +15,12 @@ def mean_squared_error(y,t):
 
 # mini-batch版 交叉熵误差
 def cross_entropy_error(y,t):
+    # 类别编号标签：(N,)；直接取出每个样本正确类别的预测概率。
+    if y.ndim > 1 and np.asarray(t).ndim == 1:
+        batch_size = y.shape[0]
+        return -np.sum(
+            np.log(y[np.arange(batch_size), np.asarray(t)] + 1e-7)
+        ) / batch_size
     '''mini-batch版 交叉熵误差'''
     # y: 模型的预测矩阵
     # t: 监督数据矩阵                         
